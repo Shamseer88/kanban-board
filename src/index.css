@@ -8,6 +8,11 @@
 
 .app {
   padding: 2rem 0;
+  background-image: url("/home-bg.png");
+  background-color: #c5cfd6;
+  background-repeat: no-repeat; /* Optional */
+  background-position: center; /* Optional */
+  min-height: 100vh;
 }
 
 .tabs {
@@ -20,25 +25,26 @@
   font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;
+  color: #945ad1;
 }
 
 .tabs .active {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #945ad1;
 }
 
 .add-task {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem 0 1rem 0;
 }
 
 .add-task input {
-  min-width: 400px;
   padding: 7.5px 15px;
-  border-radius: 15px 0 0 15px;
+  border-radius: 7px 0 0 7px;
   border: 2px solid #945ad1;
   outline: none;
+  font-size: 1rem;
 }
 
 .add-task button {
@@ -47,12 +53,85 @@
   font-size: 1rem;
   background-color: #945ad1;
   color: white;
-  padding: 7px 15px;
-  border-radius: 0 15px 15px 0;
+  padding: 9px 15px;
+  border-radius: 0 7px 7px 0;
   cursor: pointer;
 }
 
 form {
   display: flex;
   align-items: center;
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 1rem;
+}
+@media (max-width: 700px) {
+  .columns {
+    flex-direction: column;
+  }
+}
+
+.task-column {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-column h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.task-card {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.task-card:hover {
+  background-color: #e9ecef;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #945ad1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.popup select {
+  padding: 5px;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.popup select:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add glow effect */
+}
+
+.popup button {
+  padding: 5px 10px;
+  color: #945ad1;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
 }
