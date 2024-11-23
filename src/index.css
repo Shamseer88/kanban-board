@@ -7,11 +7,12 @@
 }
 
 .app {
-  padding: 2rem 4rem;
+  padding: 2rem 0;
 }
 
 .tabs {
   display: flex;
+  justify-content: center;
   gap: 15px;
 }
 
