@@ -25,3 +25,34 @@
 .tabs .active {
   border-bottom: 3px solid black;
 }
+
+.add-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.add-task input {
+  min-width: 400px;
+  padding: 7.5px 15px;
+  border-radius: 15px 0 0 15px;
+  border: 2px solid #945ad1;
+  outline: none;
+}
+
+.add-task button {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #945ad1;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
