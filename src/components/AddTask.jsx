@@ -20,7 +20,7 @@ const AddTask = ({ activeTab, tasks, setTasks }) => {
       <form onSubmit={handleAddTask}>
         <input
           type="text"
-          placeholder={`Add a ${activeTab} task`}
+          placeholder="Enter a task"
           value={taskText}
           onChange={(e) => setTaskText(e.target.value)}
           required
