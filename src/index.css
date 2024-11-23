@@ -5,3 +5,22 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+.app {
+  padding: 2rem 4rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+}
+
+.tab-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tabs .active {
+  border-bottom: 3px solid black;
+}

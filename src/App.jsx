@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Tabs from "./components/Tabs";
+import { loadActiveTab, saveActiveTab } from "./utils/localStorage";
 
 const App = () => {
-  return <div>App</div>;
+  const [activeTab, setActiveTab] = useState(loadActiveTab());
+
+  useEffect(() => {
+    saveActiveTab(activeTab);
+  }, [activeTab]);
+  return (
+    <div className="app">
+      <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
+    </div>
+  );
 };
 
 export default App;
